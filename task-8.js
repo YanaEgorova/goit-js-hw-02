@@ -1,11 +1,5 @@
 'use strict';
-
-
-
-
-
 // Напиши функцию addLogin(allLogins, login) которая:
-
 // Принимает новый логин и массив всех логинов как параметры
 // Проверяет валидность логина используя вспомогательную функцию isLoginValid
 // Если логин не валиден, прекратить исполнение функции addLogin и вернуть строку 'Ошибка! Логин должен быть от 4 до 16 символов'
@@ -14,10 +8,6 @@
 // Если isLoginUnique вернет true, addLogin добавляет новый логин в logins и возвращает строку 'Логин успешно добавлен!'
 //  Принцип единственной ответственности функции - каждая функция делает что-то одно. 
 // Это позволяет переиспользовать код и изменять логику работы функции только в одном месте, не затрагивая работу программы в целом.
-
-
-
-
 
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
@@ -38,8 +28,6 @@ const isLoginUnique = function (allLogins, login) {
 };
 
 const addLogin = function (allLogins, login) {
-
-
   if (isLoginValid(login)) {
     if (isLoginUnique(allLogins, login)) {
       allLogins.push(login);
@@ -47,14 +35,10 @@ const addLogin = function (allLogins, login) {
     } else {
       console.log('Такой логин уже используется!');
     }
-
-
   } else {
     console.log('Ошибка! Логин должен быть от 4 до 16 символов');
-
   }
 };
-
 
 addLogin(logins, 'Ajax'); // 'Логин успешно добавлен!'
 addLogin(logins, 'robotGoogles'); // 'Такой логин уже используется!'
